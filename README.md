@@ -1,0 +1,1 @@
+This form was created for my ENGL 395B creative project. It aims to provide a perspective of how horrible The Galactic Empire was and how xenophobic, racist, and so on they were within their ranks.
