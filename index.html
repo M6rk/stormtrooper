@@ -7,7 +7,14 @@
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <!--<style>    h1 {text-align: center;}</style>-->
 </head>
+<!--Author's Note: ATTENTION, PLEASE NOTe THAT THIS IS NOT A REAL ENLISTMENT FORM
+This form was created for my creative project for ENGL 395B: The project revolves around
+The Galactic Empire in Star Wars who believes in a 
+racial, species and sexually pure group among their ranks. This form is partially supposed to be satirical, however,
+this is in actuality how The Galactic Empire thinks as seen throughout the movies, but also as detailed within the expanded
+lore. Thank you for your application to The Galactic Empire. -->
 <body style="padding-left: 15px; padding-top: 10px;">
 
     <h1>Stormtrooper Enlistment Form</h1>
@@ -142,7 +149,7 @@
     <button type="button" onclick="display(7)" class="btn btn-success" data-bs-toggle="modal"
         data-bs-target="#createModal" style="margin-left: 10px">Submit Answers</button>
     <button type="button" onclick="reset()" class="btn btn-secondary">Reset</button>
-
+    <br><br><br><br><br><br>
     <div class="modal fade" id="createModal" role="dialog" data-bs-backdrop="static">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -212,19 +219,18 @@
             
             //ans question 8
             //concat ans
-            for (var i = 1; i < ans.length; i++) {
-                const num = i;
+            for (var i = 0; i < ans.length; i++) {
+                const num = i + 1;
                 boldNum = "" + num;
                 content += boldNum.bold() + ") " + ans[i] + "<br>";
                 if(ans[i] == "✔") {
-                    numRight += 1;
+                    numRight++;
                 }
             }
-            
             if(numRight < 6) {
-                document.getElementById("content").innerHTML = "Your results: " + "<br>" + content + "<br>" + "You are ineligible for enlistment, refer to the enlistment requirements for a better understanding of your rejection." + numRight;
+            document.getElementById("content").innerHTML = "Your results: " + "<br>" + content + "<br>" + "You are ineligble for enlistment, refer to the enlistment requirements for more information.";
             } else {
-                document.getElementById("content").innerHTML = "Your results: " + "<br>" + content + "<br>" + "We are thoroughly interested in your application, we will get back to you shortly about your enlistment.";
+                document.getElementById("content").innerHTML = "Your results: " + "<br>" + content + "<br>" + "We are thoroughly interested in your application, we will get back to you shortly about your";
             }
         }
         function reset() { //to reset the form
