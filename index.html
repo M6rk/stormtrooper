@@ -107,7 +107,7 @@
                             <label class="form-check-label" for="Q6C1">A) Correct him</label>
                         </div>
                         <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" id="Q5C2" name="Q6">
+                            <input class="form-check-input" type="radio" id="Q6C2" name="Q6">
                             <label class="form-check-label" for="Q6C2">C) Tell the Emperor</label>
                         </div>
                         <div class="form-check-inline">
@@ -204,9 +204,9 @@
                 ans[6] = "Ineligible: This reaction would result in termination (of your life) for your insolence.";
             }
             if(document.getElementById('Q7C1').checked) {
-                ans[6] = "✔";
+                ans[7] = "✔";
             } else {
-                ans[6] = "✔";
+                ans[7] = "✔";
             }
             
             //ans question 8
@@ -219,7 +219,7 @@
                     numRight++;
                 }
             }
-            if(numRight < 6) {
+            if(numRight < 7) {
             document.getElementById("content").innerHTML = "Your results: " + "<br>" + content + "<br>" + "You are ineligble for enlistment: refer to the enlistment requirements for more information.";
             } else {
                 document.getElementById("content").innerHTML = "Your results: " + "<br>" + content + "<br>" + "We are very interested in you. We will get back to you shortly about the status of your enlistment.";
