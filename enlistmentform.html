@@ -7,14 +7,7 @@
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <!--<style>    h1 {text-align: center;}</style>-->
 </head>
-<!--Author's Note: ATTENTION, PLEASE NOTe THAT THIS IS NOT A REAL ENLISTMENT FORM
-This form was created for my creative project for ENGL 395B: The project revolves around
-The Galactic Empire in Star Wars who believes in a 
-racial, species and sexually pure group among their ranks. This form is partially supposed to be satirical, however,
-this is in actuality how The Galactic Empire thinks as seen throughout the movies, but also as detailed within the expanded
-lore. Thank you for your application to The Galactic Empire. -->
 <body style="padding-left: 15px; padding-top: 10px;">
 
     <h1>Stormtrooper Enlistment Form</h1>
@@ -172,6 +165,7 @@ lore. Thank you for your application to The Galactic Empire. -->
             var content = "";
             var boldNum = ""
             var name = document.getElementById('usr').value; // get name
+            var numRight = 0;
             //ans question 1
             ans[0] = "Name: " + name; // dispaly anem
             //ans question 2
@@ -218,12 +212,20 @@ lore. Thank you for your application to The Galactic Empire. -->
             
             //ans question 8
             //concat ans
-            for (var i = 0; i < ans.length; i++) {
-                const num = i + 1;
+            for (var i = 1; i < ans.length; i++) {
+                const num = i;
                 boldNum = "" + num;
                 content += boldNum.bold() + ") " + ans[i] + "<br>";
+                if(ans[i] == "✔") {
+                    numRight += 1;
+                }
             }
-            document.getElementById("content").innerHTML = "Your results: " + "<br>" + content;
+            
+            if(numRight < 6) {
+                document.getElementById("content").innerHTML = "Your results: " + "<br>" + content + "<br>" + "You are ineligible for enlistment, refer to the enlistment requirements for a better understanding of your rejection." + numRight;
+            } else {
+                document.getElementById("content").innerHTML = "Your results: " + "<br>" + content + "<br>" + "We are thoroughly interested in your application, we will get back to you shortly about your enlistment.";
+            }
         }
         function reset() { //to reset the form
             document.getElementById('myForm').reset();
